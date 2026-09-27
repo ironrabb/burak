@@ -1,3 +1,15 @@
+/* Project Standards:
+- Logging standards
+- Naming standards
+function, method, variable => CAMEL   goHome
+class => PASCAL          Class
+folder => KEBAB 
+css => SNAKE    button_id
+*/
+/* Traditional API
+ * Rest API
+ * GraphQL API
+ */
 // N TASK
 
 function palindromCheck(input: string): boolean {

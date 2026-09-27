@@ -1,3 +1,18 @@
+// O task
+function calculateSumOfNumbers(arr: any[]): number {
+  let sum = 0;
+
+  for (let i = 0; i < arr.length; i++) {
+    if (typeof arr[i] === "number") {
+      sum += arr[i];
+    }
+  }
+
+  return sum;
+}
+
+console.log(calculateSumOfNumbers([1, "10", { son: 2 }, true, 3, 4, false]));
+
 /* Project Standards:
 - Logging standards
 - Naming standards
@@ -12,15 +27,15 @@ css => SNAKE    button_id
  */
 // N TASK
 
-function palindromCheck(input: string): boolean {
-  const reverseInput = input.toLowerCase().split("").reverse().join("");
-  if (input.toLowerCase() == reverseInput) return true;
+// function palindromCheck(input: string): boolean {
+//   const reverseInput = input.toLowerCase().split("").reverse().join("");
+//   if (input.toLowerCase() == reverseInput) return true;
 
-  return false;
-}
+//   return false;
+// }
 
-console.log(palindromCheck("mom"));
-console.log(palindromCheck("non"));
+// console.log(palindromCheck("mom"));
+// console.log(palindromCheck("non"));
 // // MIT TASK M
 // function getSquareNumbers(arr: number[]) {
 //   return arr.map((num: number) => ({

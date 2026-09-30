@@ -1,17 +1,25 @@
-// O task
-function calculateSumOfNumbers(arr: any[]): number {
-  let sum = 0;
-
-  for (let i = 0; i < arr.length; i++) {
-    if (typeof arr[i] === "number") {
-      sum += arr[i];
-    }
-  }
-
-  return sum;
+// P task
+function objectToArray(obj: object): any[][] {
+  return Object.entries(obj);
 }
 
-console.log(calculateSumOfNumbers([1, "10", { son: 2 }, true, 3, 4, false]));
+//Object.entries() — object ni kalit-qiymat juftliklari arrayiga aylantiradi.Va u built in method
+console.log(objectToArray({ a: 10, b: 20 }));
+
+// // O task
+// function calculateSumOfNumbers(arr: any[]): number {
+//   let sum = 0;
+
+//   for (let i = 0; i < arr.length; i++) {
+//     if (typeof arr[i] === "number") {
+//       sum += arr[i];
+//     }
+//   }
+
+//   return sum;
+// }
+
+// console.log(calculateSumOfNumbers([1, "10", { son: 2 }, true, 3, 4, false]));
 
 /* Project Standards:
 - Logging standards

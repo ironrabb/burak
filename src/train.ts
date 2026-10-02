@@ -1,10 +1,25 @@
-// P task
-function objectToArray(obj: object): any[][] {
-  return Object.entries(obj);
+// MIT TASK Q
+function hasProperty(obj: Record<string, any>, key: string): boolean {
+  return Object.prototype.hasOwnProperty.call(obj, key);
 }
 
-//Object.entries() — object ni kalit-qiymat juftliklari arrayiga aylantiradi.Va u built in method
-console.log(objectToArray({ a: 10, b: 20 }));
+console.log(hasProperty({ name: "BMW", model: "M3" }, "model"));
+console.log(hasProperty({ name: "BMW", model: "M3" }, "chevrolet"));
+/**
+ * Traditional FD  => SSR => EJS
+
+ * Modern FD > REACT > SPA
+
+
+ */
+
+// P task
+// function objectToArray(obj: object): any[][] {
+//   return Object.entries(obj);
+// }
+
+// //Object.entries() — object ni kalit-qiymat juftliklari arrayiga aylantiradi.Va u built in method
+// console.log(objectToArray({ a: 10, b: 20 }));
 
 // // O task
 // function calculateSumOfNumbers(arr: any[]): number {

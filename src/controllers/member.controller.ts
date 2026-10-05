@@ -10,12 +10,18 @@ const memberController: T = {};
 memberController.signup = async (req: Request, res: Response) => {
   try {
     console.log("signup");
+    console.log("1");
+
     const input: MemberInput = req.body,
       result: Member = await memberService.signup(input);
+    console.log("2");
+
     // TODO TOKENS AUTHIZANFICATION
     res.json({ member: result });
   } catch (err) {
-    console.log("Error, signup:", err);
+    console.log("Error, signup:");
+    console.log("6");
+
     if (err instanceof Errors) res.status(err.code).json(err);
     else res.status(Errors.standard.code).json(Errors.standard);
   }

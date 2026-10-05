@@ -13,13 +13,18 @@ class MemberService {
   public async signup(input: MemberInput): Promise<Member> {
     const salt = await bcrypt.genSalt();
     input.memberPassword = await bcrypt.hash(input.memberPassword, salt);
+    console.log("3");
 
     try {
       const result = await this.memberModel.create(input);
       result.memberPassword = "";
+      console.log("4");
+
       return result.toJSON();
     } catch (err) {
-      console.error("Error, model:signup", err);
+      console.log("5");
+
+      console.error("Error, model:signup");
       throw new Errors(HttpCode.BAD_REQUEST, Message.USED_NICK_PHONE);
     }
   }

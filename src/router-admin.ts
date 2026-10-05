@@ -13,5 +13,7 @@ routerAdmin
 
 /** Product */
 /** User */
-
+routerAdmin.get("/check-me", restaurantController.checkAuthSession); // test maqsadi
+routerAdmin.get("/logout", restaurantController.logout); // test maqsadi
 export default routerAdmin;
+// 28:30 ga keldim

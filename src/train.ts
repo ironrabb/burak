@@ -1,10 +1,21 @@
-// MIT TASK Q
-function hasProperty(obj: Record<string, any>, key: string): boolean {
-  return Object.prototype.hasOwnProperty.call(obj, key);
+// MIT TASK- R
+function calculate(str: string): number {
+  return str
+    .split("+") // "+" bo'yicha ajratish
+    .map((num) => Number(num)) // String → Number
+    .reduce((sum, num) => sum + num, 0); // Yig'indi
 }
 
-console.log(hasProperty({ name: "BMW", model: "M3" }, "model"));
-console.log(hasProperty({ name: "BMW", model: "M3" }, "chevrolet"));
+// ===== TEST =====
+console.log(calculate("1+21+3"));
+
+// MIT TASK Q
+// function hasProperty(obj: Record<string, any>, key: string): boolean {
+//   return Object.prototype.hasOwnProperty.call(obj, key);
+// }
+
+// console.log(hasProperty({ name: "BMW", model: "M3" }, "model"));
+// console.log(hasProperty({ name: "BMW", model: "M3" }, "chevrolet"));
 /**
  * Traditional FD  => SSR => EJS
 

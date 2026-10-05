@@ -6,7 +6,7 @@ function calculate(str: string): number {
     .reduce((sum, num) => sum + num, 0); // Yig'indi
 }
 
-// ===== TEST =====
+
 console.log(calculate("1+21+3"));
 
 // MIT TASK Q

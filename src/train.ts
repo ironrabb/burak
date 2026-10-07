@@ -11,7 +11,12 @@ Database validation
 //     .reduce((sum, num) => sum + num, 0); // Yig'indi
 // }
 
+<<<<<<< HEAD
 // console.log(calculate("1+21+3"));
+=======
+
+console.log(calculate("1+21+3"));
+>>>>>>> 4cefe996066373f599b63c3fce850bcd6e1a8fde
 
 // MIT TASK Q
 // function hasProperty(obj: Record<string, any>, key: string): boolean {

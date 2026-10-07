@@ -1,4 +1,4 @@
-//MIT TASK Q
+//MIT TASK S
 function missingNumber(nums: number[]): number {
   const n = nums.length;
 

@@ -1,3 +1,18 @@
+//MIT TASK Q
+function missingNumber(nums: number[]): number {
+  const n = nums.length;
+
+  // 0 dan n gacha bo'lgan sonlar yig'indisi: n * (n + 1) / 2
+  const expectedSum = (n * (n + 1)) / 2;
+
+  // Array dagi haqiqiy yig'indi
+  const actualSum = nums.reduce((sum, num) => sum + num, 0);
+
+  // Tushib qolgan son
+  return expectedSum - actualSum;
+}
+console.log(missingNumber([9, 6, 4, 2, 3, 5, 7, 0, 1])); // 8
+
 /* Validation:
 Frontend validation
 Backend validation
@@ -11,12 +26,7 @@ Database validation
 //     .reduce((sum, num) => sum + num, 0); // Yig'indi
 // }
 
-<<<<<<< HEAD
 // console.log(calculate("1+21+3"));
-=======
-
-console.log(calculate("1+21+3"));
->>>>>>> 4cefe996066373f599b63c3fce850bcd6e1a8fde
 
 // MIT TASK Q
 // function hasProperty(obj: Record<string, any>, key: string): boolean {

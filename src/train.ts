@@ -1,13 +1,17 @@
-// MIT TASK- R
-function calculate(str: string): number {
-  return str
-    .split("+") // "+" bo'yicha ajratish
-    .map((num) => Number(num)) // String → Number
-    .reduce((sum, num) => sum + num, 0); // Yig'indi
-}
+/* Validation:
+Frontend validation
+Backend validation
+Database validation
+*/
+// // MIT TASK- R
+// function calculate(str: string): number {
+//   return str
+//     .split("+") // "+" bo'yicha ajratish
+//     .map((num) => Number(num)) // String → Number
+//     .reduce((sum, num) => sum + num, 0); // Yig'indi
+// }
 
-// ===== TEST =====
-console.log(calculate("1+21+3"));
+// console.log(calculate("1+21+3"));
 
 // MIT TASK Q
 // function hasProperty(obj: Record<string, any>, key: string): boolean {

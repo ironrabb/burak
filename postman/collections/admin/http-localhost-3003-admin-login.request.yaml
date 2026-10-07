@@ -1,0 +1,15 @@
+$kind: http-request
+name: http://localhost:3003/admin/login
+description: ""
+url: http://localhost:3003/admin/login
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \  \"memberNick\": \"BURAK\",\r
+
+    \  \"memberPassword\": \"damir2020\"\r
+
+    }"
+order: 4167340036749279

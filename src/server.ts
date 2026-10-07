@@ -13,4 +13,4 @@ mongoose
       console.info(`Admin project on http://localhost:${PORT}/admin \n`);
     });
   })
-  .catch((err) => console.log("ERROR on connection MongoDB", err));
+  .catch((err) => console.log("ERROR on connection MongoDBa", err));

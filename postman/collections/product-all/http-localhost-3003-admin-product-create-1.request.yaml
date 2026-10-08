@@ -3,4 +3,4 @@ name: http://localhost:3003/admin/product/create
 description: ""
 url: http://localhost:3003/admin/product/create
 method: POST
-order: 2000
+order: 1157

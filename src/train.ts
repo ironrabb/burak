@@ -1,17 +1,24 @@
-//MIT TASK S
-function missingNumber(nums: number[]): number {
-  const n = nums.length;
-
-  // 0 dan n gacha bo'lgan sonlar yig'indisi: n * (n + 1) / 2
-  const expectedSum = (n * (n + 1)) / 2;
-
-  // Array dagi haqiqiy yig'indi
-  const actualSum = nums.reduce((sum, num) => sum + num, 0);
-
-  // Tushib qolgan son
-  return expectedSum - actualSum;
+// MIT TASK T
+function mergeSortedArrays(arr1: number[], arr2: number[]): number[] {
+  return arr1.concat(arr2).sort((a, b) => a - b);
 }
-console.log(missingNumber([9, 6, 4, 2, 3, 5, 7, 0, 1])); // 8
+
+console.log(mergeSortedArrays([0, 5, 3, 4], [1, 6, 2]));
+
+//MIT TASK S
+// function missingNumber(nums: number[]): number {
+//   const n = nums.length;
+
+//   // 0 dan n gacha bo'lgan sonlar yig'indisi: n * (n + 1) / 2
+//   const expectedSum = (n * (n + 1)) / 2;
+
+//   // Array dagi haqiqiy yig'indi
+//   const actualSum = nums.reduce((sum, num) => sum + num, 0);
+
+//   // Tushib qolgan son
+//   return expectedSum - actualSum;
+// }
+// console.log(missingNumber([9, 6, 4, 2, 3, 5, 7, 0, 1])); // 8
 
 /* Validation:
 Frontend validation

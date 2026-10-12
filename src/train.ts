@@ -1,9 +1,16 @@
-// MIT TASK T
-function mergeSortedArrays(arr1: number[], arr2: number[]): number[] {
-  return arr1.concat(arr2).sort((a, b) => a - b);
+// MIT TASK Unpm
+function sumOdds(n: number): number {
+  return Math.floor(n / 2);
 }
+console.log(sumOdds(9));
+console.log(sumOdds(11));
 
-console.log(mergeSortedArrays([0, 5, 3, 4], [1, 6, 2]));
+// // MIT TASK T
+// function mergeSortedArrays(arr1: number[], arr2: number[]): number[] {
+//   return arr1.concat(arr2).sort((a, b) => a - b);
+// }
+
+// console.log(mergeSortedArrays([0, 5, 3, 4], [1, 6, 2]));
 
 //MIT TASK S
 // function missingNumber(nums: number[]): number {

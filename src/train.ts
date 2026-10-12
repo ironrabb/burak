@@ -1,4 +1,4 @@
-// MIT TASK Unpm
+// MIT TASK U
 function sumOdds(n: number): number {
   return Math.floor(n / 2);
 }

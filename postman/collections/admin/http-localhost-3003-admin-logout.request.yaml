@@ -3,4 +3,4 @@ name: http://localhost:3003/admin/logout
 description: ""
 url: http://localhost:3003/admin/logout
 method: GET
-order: 1791286958607
+order: 1000

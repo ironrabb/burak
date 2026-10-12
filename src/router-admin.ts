@@ -38,5 +38,16 @@ routerAdmin.post(
 /** User */
 routerAdmin.get("/check-me", restaurantController.checkAuthSession); // test maqsadi
 routerAdmin.get("/logout", restaurantController.logout); // test maqsadi
+/** User */
+routerAdmin.get(
+  "/user/all",
+  restaurantController.verifyRestaurant,
+  restaurantController.getUsers,
+);
+routerAdmin.post(
+  "/user/edit",
+  restaurantController.verifyRestaurant,
+  restaurantController.updateChosenUser,
+);
 export default routerAdmin;
 // 28:30 ga keldim

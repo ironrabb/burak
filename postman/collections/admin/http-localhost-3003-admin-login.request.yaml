@@ -1,7 +1,7 @@
 $kind: http-request
 name: http://localhost:3003/admin/login
 description: ""
-url: http://localhost:3003/admin/login
+url: http://localhost:3003/admin/user/edit
 method: POST
 body:
   type: json
@@ -12,4 +12,4 @@ body:
     \  \"memberPassword\": \"damir2020\"\r
 
     }"
-order: 4167340036749279
+order: 4000

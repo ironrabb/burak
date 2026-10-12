@@ -71,4 +71,4 @@ productController.updateChosenProduct = async (
 };
 
 export default productController;
-// 5258
+//

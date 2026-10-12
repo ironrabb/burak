@@ -1,0 +1,5 @@
+$kind: http-request
+name: admin/user/all
+url: http://localhost:3003/admin/user/all
+method: GET
+order: 6000

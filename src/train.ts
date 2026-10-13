@@ -1,9 +1,17 @@
-// MIT TASK U
-function sumOdds(n: number): number {
-  return Math.floor(n / 2);
+// MIT TASK V
+function countChars(str: string): Record<string, number> {
+  const result: Record<string, number> = {};
+  for (const i of str) result[i] = (result[i] || 0) + 1;
+  return result;
 }
-console.log(sumOdds(9));
-console.log(sumOdds(11));
+
+console.log(countChars("uzbekistan"));
+// // MIT TASK U
+// function sumOdds(n: number): number {
+//   return Math.floor(n / 2);
+// }
+// console.log(sumOdds(9));
+// console.log(sumOdds(11));
 
 // // MIT TASK T
 // function mergeSortedArrays(arr1: number[], arr2: number[]): number[] {

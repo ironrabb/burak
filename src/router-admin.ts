@@ -50,4 +50,3 @@ routerAdmin.post(
   restaurantController.updateChosenUser,
 );
 export default routerAdmin;
-// 28:30 ga keldim

@@ -34,7 +34,7 @@ restaurantController.getLogin = (req: Request, res: Response) => {
     res.redirect("/admin");
   }
 };
-const memberService = new MemberService();
+const memberService = new MemberService(); ///////////
 restaurantController.processSignup = async (
   req: AdminRequest,
   res: Response,

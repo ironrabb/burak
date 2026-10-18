@@ -1,5 +1,6 @@
 console.log("Products frontend javascript file");
 $(function () {
+  //drink or food selection
   $(".product-collection").on("change", () => {
     const selectedValue = $(".product-collection").val();
     if (selectedValue === "DRINK") {
@@ -10,6 +11,7 @@ $(function () {
       $("#product-collection").show();
     }
   });
+  //show/hide button ochish yopish
   $("#process-btn").on("click", () => {
     $(".dish-container").slideToggle(500);
     $("#process-btn").css("display", "none");
@@ -19,6 +21,7 @@ $(function () {
     $(".dish-container").slideToggle(100);
     $("#process-btn").css("display", "flex");
   });
+  //change product status
   $(".new-product-status").on("change", async function (e) {
     const id = e.target.id;
     const productStatus = $(`#${id}.new-product-status`).val();

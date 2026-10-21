@@ -1,15 +1,49 @@
-// MIT TASK W
-function chunkArray(arr: any[], size: number): any[][] {
-  const result: any[][] = [];
+// MIT TASK X
+function countOccurrences(obj: any, target: string): number {
+  let count = 0;
 
-  for (let i = 0; i < arr.length; i += size) {
-    result.push(arr.slice(i, i + size));
+  // 1. Object ekanligini va null emasligini tekshiramiz
+  if (typeof obj === "object" && obj !== null) {
+    // 2. Object ichidagi barcha kalitlarni aylanib chiqamiz
+    for (const key in obj) {
+      // 3. Agar kalit biz qidirayotgan stringga teng bo'lsa
+      if (key === target) {
+        count++;
+      }
+
+      // 4. Agar qiymat object bo'lsa, rekursiya qilib ichiga kiramiz
+      if (typeof obj[key] === "object" && obj[key] !== null) {
+        count += countOccurrences(obj[key], target);
+      }
+    }
   }
 
-  return result;
+  return count;
 }
 
-console.log(chunkArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 3));
+const data = {
+  model: "Bugatti",
+  steer: {
+    model: "HANKOOK",
+    size: 30,
+  },
+};
+
+console.log(countOccurrences(data, "model"));
+console.log(countOccurrences(data, "size"));
+console.log(countOccurrences(data, "name"));
+// // MIT TASK W
+// function chunkArray(arr: any[], size: number): any[][] {
+//   const result: any[][] = [];
+
+//   for (let i = 0; i < arr.length; i += size) {
+//     result.push(arr.slice(i, i + size));
+//   }
+
+//   return result;
+// }
+
+// console.log(chunkArray([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 3));
 
 // // MIT TASK V
 // function countChars(str: string): Record<string, number> {

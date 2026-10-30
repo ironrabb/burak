@@ -1,0 +1,4 @@
+$kind: http-request
+url: http://localhost:3003/member/detail
+method: GET
+order: 1513909670132120

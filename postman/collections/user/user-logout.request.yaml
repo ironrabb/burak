@@ -1,0 +1,5 @@
+$kind: http-request
+name: user/logout
+url: http://localhost:3003/member/logout
+method: POST
+order: 1513909670131120

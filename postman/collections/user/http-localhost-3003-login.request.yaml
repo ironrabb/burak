@@ -1,17 +1,17 @@
 $kind: http-request
 name: http://localhost:3003/login
 description: ""
-url: http://localhost:3003/login
+url: http://localhost:3003/member/login
 method: POST
 body:
   type: json
   content: "{\r
 
-    \  \"memberNick\": \"David\",\r
+    \  \"memberNick\": \"hoshim\",\r
 
     \ \r
 
-    \  \"memberPassword\": \"damir2020\"\r
+    \  \"memberPassword\": \"damir202stg0\"\r
 
     }"
 order: 1791286988515

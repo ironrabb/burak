@@ -30,12 +30,25 @@ class AuthService {
     });
   }
   public async checkAuth(token: string): Promise<Member> {
-    const result: Member = (await jwt.verify(
-      token,
-      this.secretToken,
-    )) as Member;
-    console.log(` --- [AUTH] memberNick: ${result.memberNick} --- `);
-    return result;
+    try {
+      // 1. Agar token bo'lmasa, darhol 401 xatosi beramiz
+      if (!token) {
+        throw new Errors(HttpCode.UNAUTHORIZED, Message.NOT_AUTHENTICATED);
+      }
+
+      // 2. Tokenni tekshiramiz
+      const result: Member = (await jwt.verify(
+        token,
+        this.secretToken,
+      )) as Member;
+
+      console.log(` --- [AUTH] memberNick: ${result.memberNick} --- `);
+      return result;
+    } catch (err) {
+      // 3. Agar jwt.verify xato bersa (muddati o'tgan, soxta), 401 qaytaramiz
+      if (err instanceof Errors) throw err;
+      throw new Errors(HttpCode.UNAUTHORIZED, Message.NOT_AUTHENTICATED);
+    }
   }
 }
 

@@ -1,0 +1,5 @@
+$kind: http-request
+name: user/update
+url: http://localhost:3003/member/update
+method: POST
+order: 3684

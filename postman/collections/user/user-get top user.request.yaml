@@ -1,0 +1,5 @@
+$kind: http-request
+name: user/get top user
+url: http://localhost:3003/member/top-users
+method: POST
+order: 3264

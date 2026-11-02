@@ -4,7 +4,13 @@ import {
   ProductSize,
   ProductStatus,
 } from "../enums/product.enum";
-
+export interface ProductInquiry {
+  order: string;
+  page: number;
+  limit: number;
+  productCollection?: ProductCollection;
+  search?: string;
+}
 export interface Product {
   _id: ObjectId;
   productStatus: ProductStatus;

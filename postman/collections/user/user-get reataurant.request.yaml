@@ -1,0 +1,5 @@
+$kind: http-request
+name: user/get reataurant
+url: http://localhost:3003/member/restaurant
+method: GET
+order: 3311

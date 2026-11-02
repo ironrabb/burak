@@ -1,17 +1,17 @@
 $kind: http-request
 name: http://localhost:3003/signup
 description: ""
-url: http://localhost:3003/signup
+url: http://localhost:3003/member/restaurant
 method: POST
 body:
   type: json
   content: "{\r
 
-    \  \"memberNick\": \"hoshim\",\r
+    \  \"memberNick\": \"iron\",\r
 
-    \  \"memberPhone\": \"82102458785114\",\r
+    \  \"memberPhone\": \"010687477755\",\r
 
-    \  \"memberPassword\": \"damir202stg0\"\r
+    \  \"memberPassword\": \"iron12345$\"\r
 
     }"
 order: 2000

@@ -1,4 +1,4 @@
 $kind: http-request
 url: http://localhost:3003/member/detail
 method: GET
-order: 8000
+order: 9000

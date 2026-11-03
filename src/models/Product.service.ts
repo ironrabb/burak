@@ -7,8 +7,9 @@ import {
 } from "../libs/types/product";
 import ProductModel from "../schema/Product.model";
 import { shapeIntoMongooseObjectId } from "../libs/config";
-import { ProductCollection } from "../libs/enums/product.enum";
+import { ProductCollection, ProductStatus } from "../libs/enums/product.enum";
 import { T } from "../libs/types/common";
+import { ObjectId } from "mongoose";
 class ProductService {
   private readonly productModel;
 
@@ -41,6 +42,25 @@ class ProductService {
 
     return result;
   }
+  public async getProduct(
+    memberId: ObjectId | null,
+    id: string,
+  ): Promise<Product> {
+    const productId = shapeIntoMongooseObjectId(id);
+
+    let result = await this.productModel
+      .findOne({
+        _id: productId,
+        productStatus: ProductStatus.PROCESS,
+      })
+      .exec();
+    if (!result) throw new Errors(HttpCode.NOT_FOUND, Message.NO_DATA_FOUND);
+
+    // TODO:
+    // If authenticated users => first => view log creation
+
+    return result;
+  }
   /** SSR */
   public async getAllProducts(): Promise<Product[]> {
     const result = await this.productModel.find().exec();
@@ -70,6 +90,5 @@ class ProductService {
     return result;
   }
 }
-import { ProductStatus } from "../libs/enums/product.enum";
 
 export default ProductService;

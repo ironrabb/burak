@@ -1,0 +1,13 @@
+$kind: http-request
+url: localhost:3003/order/update
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \  \"orderId\": \"6aec15ce125abd7d2f97eb41\",\r
+
+    \  \"orderStatus\": \"PROCESS\"\r
+
+    }"
+order: 7760

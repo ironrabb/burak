@@ -13,7 +13,6 @@ export interface OrderItem {
 }
 
 export interface Order {
-  _id: ObjectId;export interface Order {
   _id: ObjectId;
   orderTotal: number;
   orderDelivery: number;
@@ -35,5 +34,9 @@ export interface OrderItemInput {
 export interface OrderInquiry {
   page: number;
   limit: number;
+  orderStatus: OrderStatus;
+}
+export interface OrderUpdateInput {
+  orderId: string;
   orderStatus: OrderStatus;
 }

@@ -7,7 +7,7 @@ import orderController from "./controllers/order.controller";
 /** Member **/
 router.get(
   "/member/restaurant",
-  memberController.verifyAuth,
+
   memberController.getRestaurant,
 );
 router.post("/member/login", memberController.login);
@@ -31,13 +31,13 @@ router.post(
 );
 router.get(
   "/member/top-users",
-  memberController.verifyAuth,
+
   memberController.getTopUsers,
 );
 /** Product **/
 router.get(
   "/product/all",
-  memberController.verifyAuth,
+
   productController.getProducts,
 );
 router.get(
